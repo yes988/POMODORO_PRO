@@ -1,97 +1,74 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# POMODORO_PRO
 
-# Getting Started
+POMODORO_PRO is a productivity mobile application designed to help users manage their tasks efficiently using the Pomodoro technique. The app enables users to organize tasks by urgency and importance, track their progress, and visualize productivity analytics through a modern, user-friendly interface. It also integrates with the Google Calendar API, allowing users to schedule and synchronize events directly with their Google Calendar for better time management and planning.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Features
 
-## Step 1: Start Metro
+- **Task Management:** Organize tasks using a quadrant system inspired by the Eisenhower Matrix (Urgent & Important, Important but Not Urgent, etc.).
+- **Pomodoro Timer:** Focus on tasks using the Pomodoro technique to boost productivity.
+- **Progress Tracking:** Visualize completed tasks and monitor productivity statistics.
+- **Reports & Analytics:** View charts and summaries of your productivity.
+- **Google Calendar Integration:** Schedule events and sync tasks with your Google Calendar for seamless event management.
+- **Modern UI:** Clean, Material Design-inspired interface for an intuitive user experience.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## Technologies & Tools Used
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- **Android Studio:** Android build and testing.
+- **Java/Kotlin:** Main programming languages for Android development.
+- **Google Calendar API:** For event scheduling and calendar synchronization.
+- **Gradle:** Android build configuration.
+- **ESLint & Prettier:** Code linting and formatting.
+- **Watchman:** File watching during development.
 
-```sh
-# Using npm
-npm start
+## Getting Started
 
-# OR using Yarn
-yarn start
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/yourusername/POMODORO_PRO.git
+    cd POMODORO_PRO
+    ```
+
+2. **Open in Android Studio and build the project.**
+
+3. **Configure Google Calendar API:**
+   - Set up a project in the [Google Cloud Console](https://console.cloud.google.com/).
+   - Enable the Google Calendar API.
+   - Download your `google-services.json` and place it in the `app` directory.
+   - Follow the in-app instructions to authenticate and sync your calendar.
+
+4. **Run the app on your Android device or emulator.**
+
+## Database Sample Data
+
+Quadrant table:
+```sql
+INSERT INTO quadrant (quadrant_id, title, description, color_code) VALUES
+(1, 'Urgent & Important', 'High priority tasks requiring immediate attention', '#FF5252'),
+(2, 'Important, Not Urgent', 'Strategic tasks for long-term success', '#4CAF50'),
+(3, 'Urgent, Not Important', 'Time-sensitive but lower value tasks', '#FFC107'),
+(4, 'Not Urgent & Not Important', 'Low priority tasks with minimal impact', '#9E9E9E');
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+Task table:
+```sql
+INSERT INTO task (task_id, title, description, quadrant_id, due_date, estimated_pomodoros, completed_pomodoros, status) VALUES
+(1, 'Complete Project Proposal', 'Finish and submit Q3 project proposal', 1, '2025-06-20', 4, 0, 'pending'),
+(2, 'Client Meeting Preparation', 'Prepare presentation for key client meeting', 1, '2025-06-18', 3, 1, 'in_progress'),
+(3, 'Learn New Framework', 'Study new Android development fundamentals', 2, '2025-07-01', 8, 2, 'in_progress'),
+(4, 'Code Review', 'Review team pull requests', 2, '2025-06-25', 3, 0, 'pending'),
+(5, 'Email Responses', 'Clear inbox and respond to pending emails', 3, '2025-06-19', 2, 1, 'in_progress'),
+(6, 'Team Meeting', 'Weekly sync-up with development team', 3, '2025-06-18', 1, 0, 'pending'),
+(7, 'Organize Desktop', 'Clean up and organize work files', 4, '2025-06-30', 1, 0, 'pending'),
+(8, 'Update Documentation', 'Review and update old documentation', 4, '2025-07-05', 2, 0, 'pending');
 ```
 
-### iOS
+## Future Work
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+- **Mini Game:** Plans for a gamified productivity experience (currently unfinished).
+- **Website/Blog:** Potential for a companion website or blog to share productivity tips and user stories.
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## License
 
-```sh
-bundle install
-```
+This project is for educational and personal use.
 
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+---
