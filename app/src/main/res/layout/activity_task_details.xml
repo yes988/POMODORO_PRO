@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    android:fitsSystemWindows="true">
+
+    <!-- App Bar with Collapsing Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/primary_color"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <!-- Task Name as Expanded Title -->
+            <EditText
+                android:id="@+id/taskName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary_color"
+                android:enabled="false"
+                android:gravity="bottom|start"
+                android:hint="Task Name"
+                android:padding="@dimen/task_detail_padding"
+                android:textColor="@color/white"
+                android:textColorHint="#CCFFFFFF"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_collapseMode="parallax" />
+
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageButton
+                    android:id="@+id/btn_return_dashboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Return to Dashboard"
+                    android:padding="8dp"
+                    app:srcCompat="@android:drawable/ic_menu_revert"
+                    app:tint="@color/white" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/task_detail_padding">
+
+            <!-- Action Buttons Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/actionButtonsCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/task_detail_section_margin"
+                app:cardCornerRadius="@dimen/task_detail_card_corner_radius"
+                app:cardElevation="@dimen/task_detail_card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/IMGbtn_edit"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="Edit Task"
+                        android:drawableTop="@android:drawable/ic_menu_edit"
+                        android:text="Edit"
+                        android:textColor="@color/primary_color"
+                        app:icon="@android:drawable/ic_menu_edit"
+                        app:iconGravity="textStart"
+                        app:iconTint="@color/primary_color" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:background="@color/light_gray" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/IMGbtn_del"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:contentDescription="Delete Task"
+                        android:drawableTop="@android:drawable/ic_menu_delete"
+                        android:text="Delete"
+                        android:textColor="@color/error_color"
+                        app:icon="@android:drawable/ic_menu_delete"
+                        app:iconGravity="textStart"
+                        app:iconTint="@color/error_color" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Description Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/descriptionCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/task_detail_section_margin"
+                app:cardCornerRadius="@dimen/task_detail_card_corner_radius"
+                app:cardElevation="@dimen/task_detail_card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/task_detail_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/task_detail_label_margin"
+                        android:text="Description"
+                        android:textColor="@color/primary_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/taskDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:enabled="false"
+                        android:gravity="start|top"
+                        android:hint="No description"
+                        android:minHeight="100dp"
+                        android:textColor="@color/text_primary"
+                        android:textColorHint="@color/text_secondary"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Due Date Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/dueDateCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/task_detail_section_margin"
+                app:cardCornerRadius="@dimen/task_detail_card_corner_radius"
+                app:cardElevation="@dimen/task_detail_card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/task_detail_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/task_detail_label_margin"
+                        android:text="Due Date"
+                        android:textColor="@color/primary_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/task_detail_icon_size"
+                            android:layout_height="@dimen/task_detail_icon_size"
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="Calendar Icon"
+                            android:src="@android:drawable/ic_menu_my_calendar"
+                            app:tint="@color/primary_color" />
+
+                        <EditText
+                            android:id="@+id/taskDueDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:clickable="true"
+                            android:enabled="false"
+                            android:focusable="false"
+                            android:hint="Set due date"
+                            android:padding="8dp"
+                            android:textColor="@color/text_primary"
+                            android:textColorHint="@color/text_secondary"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Priority Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/priorityCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/task_detail_card_corner_radius"
+                app:cardElevation="@dimen/task_detail_card_elevation">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/task_detail_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/task_detail_label_margin"
+                        android:text="Priority"
+                        android:textColor="@color/primary_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/task_detail_icon_size"
+                            android:layout_height="@dimen/task_detail_icon_size"
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="Priority Icon"
+                            android:src="@android:drawable/ic_menu_sort_by_size"
+                            app:tint="@color/primary_color" />
+
+                        <Spinner
+                            android:id="@+id/taskPrioritySpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:enabled="false"
+                            android:minHeight="48dp"
+                            android:padding="8dp"
+                            android:popupBackground="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Floating Action Button for Save -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FAbtn_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/task_detail_card_margin"
+        android:clickable="true"
+        android:contentDescription="Save Changes"
+        android:focusable="true"
+        android:visibility="gone"
+        app:backgroundTint="@color/primary_color"
+        app:srcCompat="@android:drawable/ic_menu_save"
+        app:tint="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

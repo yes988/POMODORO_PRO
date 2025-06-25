@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Aurora Purple Palette -->
+    <color name="aurora_purple_1">#F1C2F2</color> <!-- Light lavender -->
+    <color name="aurora_purple_2">#934EA6</color> <!-- Medium purple -->
+    <color name="aurora_purple_3">#8836BF</color> <!-- Rich purple -->
+    <color name="aurora_purple_4">#C394F2</color> <!-- Soft lilac -->
+    <color name="aurora_purple_5">#561AD9</color> <!-- Deep violet -->
+
+    <!-- Updated Material Theme Colors -->
+    <color name="purple_200">#F1C2F2</color> <!-- Using aurora_purple_1 -->
+    <color name="purple_500">#8836BF</color> <!-- Using aurora_purple_3 -->
+    <color name="purple_700">#561AD9</color> <!-- Using aurora_purple_5 -->
+    <color name="teal_200">#C394F2</color> <!-- Using aurora_purple_4 as accent -->
+    <color name="teal_700">#934EA6</color> <!-- Using aurora_purple_2 -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color> <!-- Bright Red -->
+    <color name="purple_primary">#8836BF</color> <!-- Updated to aurora_purple_3 -->
+    <color name="purple_primary_dark">#561AD9</color> <!-- Updated to aurora_purple_5 -->
+    <color name="purple_accent">#C394F2</color> <!-- Updated to aurora_purple_4 -->
+    <color name="light_gray">#FFCCCCCC</color>
+    <color name="green_complete">#4CAF50</color>
+    <color name="green_incomplete">#8BC34A</color>
+    <color name="yellow_complete">#FFEB3B</color>
+    <color name="yellow_incomplete">#FFC107</color>
+    <color name="orange_complete">#FF9800</color>
+    <color name="orange_incomplete">#FF5722</color>
+    <color name="red_complete">#F44336</color>
+    <color name="blue_complete">#2196F3</color>
+    <color name="blue_incomplete">#4CAF50</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_dark">#888888</color>
+    <color name="green_dark">#4CAF50</color>
+    <color name="green_light">#8BC34A</color>
+    <color name="primary_teal">#934EA6</color> <!-- Updated to aurora_purple_2 -->
+    <color name="accent_lime">#F1C2F2</color> <!-- Updated to aurora_purple_1 -->
+    <color name="text_primary">#212121</color> <!-- High-contrast dark grey -->
+    <color name="text_secondary">#757575</color> <!-- For less important text -->
+    <color name="spinner_text_color">#212121</color> <!-- Use in your adapter -->
+    <color name="theme_purple">#8836BF</color> <!-- Updated to aurora_purple_3 -->
+
+    <color name="urgent_red">#FF5252</color>
+    <color name="urgent_light">#FFEBEE</color>
+    <color name="important_purple">#8836BF</color> <!-- Updated to aurora_purple_3 -->
+    <color name="important_light">#F1C2F2</color> <!-- Updated to aurora_purple_1 -->
+    <color name="delegate_blue">#C394F2</color> <!-- Updated to aurora_purple_4 -->
+    <color name="delegate_light">#F1C2F2</color> <!-- Updated to aurora_purple_1 -->
+    <color name="delete_gray">#9E9E9E</color>
+    <color name="delete_light">#FAFAFA</color>
+    <color name="background">#F8F0FF</color> <!-- Slightly purplish background -->
+    <color name="gold">#FFD700</color>
+    <color name="orange">#FFA500</color>
+    <color name="tomato">#FF6347</color>
+    <color name="royal_blue">#4169E1</color>
+    <color name="streak_3">#C394F2</color> <!-- Updated to aurora_purple_4 -->
+    <color name="streak_7">#934EA6</color> <!-- Updated to aurora_purple_2 -->
+    <color name="streak_30">#561AD9</color> <!-- Updated to aurora_purple_5 -->
+    <color name="green">#4CAF50</color>
+    <color name="blue">#C394F2</color> <!-- Updated to aurora_purple_4 -->
+    <color name="gray">#607D8B</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="light_green">#8BC34A</color>
+    
+    <color name="purple">#8836BF</color> <!-- Updated to aurora_purple_3 -->
+    <color name="purple_dark">#561AD9</color> <!-- Updated to aurora_purple_5 -->
+    <color name="purple_light">#F1C2F2</color> <!-- Updated to aurora_purple_1 -->
+    <color name="teal">#934EA6</color> <!-- Updated to aurora_purple_2 -->
+    <color name="teal_dark">#561AD9</color> <!-- Updated to aurora_purple_5 -->
+    <color name="teal_light">#F1C2F2</color> <!-- Updated to aurora_purple_1 -->
+    <color name="cyan">#C394F2</color> <!-- Updated to aurora_purple_4 -->
+    <color name="cyan_dark">#934EA6</color> <!-- Updated to aurora_purple_2 -->
+    <color name="cyan_light">#F1C2F2</color> <!-- Updated to aurora_purple_1 -->
+    <color name="light_blue">#C394F2</color> <!-- Updated to aurora_purple_4 -->
+    <color name="light_blue_dark">#8836BF</color> <!-- Updated to aurora_purple_3 -->
+    <color name="light_blue_light">#F1C2F2</color> <!-- Updated to aurora_purple_1 -->
+    
+    <!-- Background Colors -->
+    <color name="light_background">#F8F0FF</color> <!-- Light purple background -->
+    <color name="card_background">#FFFFFFFF</color>
+
+    <!-- Primary Colors -->
+    <color name="primary_color">#8836BF</color> <!-- Updated to aurora_purple_3 -->
+    <color name="break_color">#934EA6</color> <!-- Updated to aurora_purple_2 -->
+    <color name="primary_text">#DE000000</color> <!-- 87% opacity black -->
+    <color name="secondary_text">#99000000</color> <!-- 60% opacity black -->
+
+    <!-- Progress Colors -->
+    <color name="progress_completed">#C394F2</color> <!-- Updated to aurora_purple_4 -->
+    <color name="progress_background">#1F000000</color> <!-- 12% opacity black -->
+
+    <!-- Chip Colors -->
+    <color name="date_badge">#561AD9</color> <!-- Updated to aurora_purple_5 -->
+    <color name="on_date_badge">#FFFFFFFF</color>
+    <color name="time_chip">#F1C2F2</color> <!-- Updated to aurora_purple_1 -->
+    <color name="on_time_chip">#212121</color> <!-- Dark text for contrast -->
+
+    <!-- Error Color -->
+    <color name="error_color">#FFB00020</color>
+
+    <!-- Achievement Colors -->
+    <color name="achievement_gold">#FFD700</color>
+    <color name="achievement_locked">#9E9E9E</color>
+    <color name="achievement_unlocked_bg">#F1C2F2</color> <!-- Updated to aurora_purple_1 -->
+
+</resources>

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5FF"
+    android:padding="8dp"
+    tools:context=".ui.task.DashboardFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Title with more spacing -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:drawablePadding="12dp"
+                android:gravity="center"
+                android:text="Eisenhower Matrix"
+                android:textColor="#800080"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:drawableTopCompat="@drawable/ic_matrix" />
+
+            <!-- Task Quadrant Layout with improved spacing -->
+            <TableLayout
+                android:id="@+id/taskTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/quadrant_background"
+                android:padding="12dp"
+                android:stretchColumns="0,2"
+                android:visibility="visible"
+                android:layout_marginBottom="24dp">
+
+                <!-- Quadrant rows with increased padding -->
+                <TableRow
+                    android:layout_marginBottom="4dp">
+
+                    <!-- DO NOW -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/quadrant_header_urgent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <!-- Increased icon margin -->
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="12dp"
+                            app:srcCompat="@drawable/ic_urgent" />
+
+                        <TextView
+                            android:id="@+id/textDoNow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DO NOW"
+                            android:textColor="#2B2B2B"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Vertical Divider -->
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#800080" />
+
+                    <!-- SCHEDULE -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/quadrant_header_important"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="12dp"
+                            app:srcCompat="@drawable/ic_calendar" />
+
+                        <TextView
+                            android:id="@+id/textSchedule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SCHEDULE"
+                            android:textColor="#2B2B2B"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </TableRow>
+
+                <!-- Task containers with more space -->
+                <TableRow
+                    android:layout_marginBottom="8dp">
+
+                    <!-- DO NOW TASKS -->
+                    <LinearLayout
+                        android:id="@+id/layoutDoNow"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/quadrant_content_urgent"
+                        android:orientation="vertical"
+                        android:minHeight="180dp"
+                        android:padding="12dp">
+
+                        <!-- Tasks will be added programmatically -->
+                    </LinearLayout>
+
+                    <!-- Vertical Divider -->
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#800080" />
+
+                    <!-- SCHEDULE TASKS -->
+                    <LinearLayout
+                        android:id="@+id/layoutSchedule"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/quadrant_content_important"
+                        android:orientation="vertical"
+                        android:minHeight="180dp"
+                        android:padding="12dp">
+
+                        <!-- Tasks will be added programmatically -->
+                    </LinearLayout>
+                </TableRow>
+
+                <!-- Horizontal Divider with margin -->
+                <TableRow
+                    android:layout_marginVertical="8dp">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_span="3"
+                        android:background="#800080" />
+                </TableRow>
+
+                <!-- Delegate/Delete row with more padding -->
+                <TableRow
+                    android:layout_marginTop="4dp">
+
+                    <!-- DELEGATE -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/quadrant_header_delegate"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="12dp"
+                            app:srcCompat="@drawable/ic_delegate" />
+
+                        <TextView
+                            android:id="@+id/textDelegate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DELEGATE"
+                            android:textColor="#222222"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!-- Vertical Divider -->
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#800080" />
+
+                    <!-- DELETE -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/quadrant_header_delete"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="12dp"
+                            app:srcCompat="@drawable/ic_delete" />
+
+                        <TextView
+                            android:id="@+id/textDelete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DELETE"
+                            android:textColor="#222222"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </TableRow>
+
+                <!-- Delegate/Delete task containers -->
+                <TableRow
+                    android:layout_marginTop="8dp">
+
+                    <!-- DELEGATE TASKS -->
+                    <LinearLayout
+                        android:id="@+id/layoutDelegate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/quadrant_content_delegate"
+                        android:orientation="vertical"
+                        android:minHeight="180dp"
+                        android:padding="12dp">
+
+                        <!-- Tasks will be added programmatically -->
+                    </LinearLayout>
+
+                    <!-- Vertical Divider -->
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="#800080" />
+
+                    <!-- DELETE TASKS -->
+                    <LinearLayout
+                        android:id="@+id/layoutDelete"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/quadrant_content_delete"
+                        android:orientation="vertical"
+                        android:minHeight="180dp"
+                        android:padding="12dp">
+
+                        <!-- Tasks will be added programmatically -->
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+
+            <!-- Task Input Card with improved spacing -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="Add New Task"
+                        android:textColor="#800080"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <!-- Input fields with better spacing -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:boxStrokeColor="#800080"
+                        app:startIconDrawable="@drawable/ic_task"
+                        app:startIconTint="#800080">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/taskName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Task Name"
+                            android:textColorHint="#800080" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:boxStrokeColor="#800080"
+                        app:startIconDrawable="@drawable/ic_description"
+                        app:startIconTint="#800080">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/taskDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Description"
+                            android:textColorHint="#800080" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:boxStrokeColor="#800080"
+                        app:startIconDrawable="@drawable/ic_date"
+                        app:startIconTint="#800080">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/taskDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:hint="Due Date"
+                            android:inputType="none"
+                            android:textColorHint="#800080" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Priority -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/priorityIcon"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        app:boxStrokeColor="#800080"
+                        app:boxStrokeWidth="1dp"
+                        app:boxStrokeWidthFocused="2dp"
+                        app:hintEnabled="false"
+                        android:src="@android:drawable/ic_menu_sort_by_size"
+                        app:startIconTint="#800080">
+
+                        <TextView
+                            android:id="@+id/priorityLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Priority"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="4dp"/>
+
+                        <Spinner
+                            android:id="@+id/taskPriority"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:minHeight="48dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Add Button with more padding -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddTask"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:minHeight="48dp"
+                        android:paddingVertical="12dp"
+                        android:text="ADD TASK"
+                        android:textAllCaps="false"
+                        android:textSize="16sp"
+                        app:backgroundTint="#800080"
+                        app:cornerRadius="8dp"
+                        app:icon="@drawable/ic_add"
+                        app:iconTint="#FFFFFF"
+                        app:rippleColor="#E6B3FF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Aurora Purple gradient -->
+            <gradient
+                android:type="linear"
+                android:angle="135"
+                android:startColor="#F1C2F2"
+                android:centerColor="#C394F2"
+                android:endColor="#934EA6" />
+        </shape>
+    </item>
+</layer-list> 

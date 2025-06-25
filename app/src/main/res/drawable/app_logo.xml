@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Circular background (purple) -->
+    <path
+        android:fillColor="@color/aurora_purple_3"
+        android:pathData="M50,95 A45,45 0 1,1 50,5 A45,45 0 1,1 50,95z" />
+
+    <!-- Stem/Leaf -->
+    <path
+        android:fillColor="#4ADE80"
+        android:pathData="M50,5C54,5,56,10,52,15C48,20,52,5,50,5Z" />
+
+    <!-- White circle for clock face -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,80 A30,30 0 1,1 50,20 A30,30 0 1,1 50,80z" />
+
+    <!-- Clock Hour Hand -->
+    <path
+        android:name="hourHand"
+        android:fillColor="@color/aurora_purple_5"
+        android:pathData="M48,50 L52,50 L52,35 L48,35z" />
+
+    <!-- Clock Minute Hand (wrapped in a group for rotation) -->
+    <group
+        android:name="minuteHandGroup"
+        android:pivotX="50"
+        android:pivotY="50">
+        <path
+            android:name="minuteHand"
+            android:fillColor="@color/aurora_purple_5"
+            android:pathData="M48,50 L52,50 L52,28 L48,28z" />
+    </group>
+
+    <!-- Checkmark (To-Do List) -->
+    <path
+        android:fillColor="#4ADE80"
+        android:pathData="M33,58 L45,70 L67,48 L62,43 L45,60 L38,53z" />
+</vector> 

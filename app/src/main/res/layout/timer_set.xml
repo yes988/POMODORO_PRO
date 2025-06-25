@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.home.TimerActivity">
+
+    <!-- Back Button -->
+
+    <!-- Main Settings Card -->
+    <ImageButton
+        android:id="@+id/btnBackToHome"
+        android:layout_width="56dp"
+        android:layout_height="64dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back to Home"
+        android:src="@android:drawable/ic_menu_revert"
+        app:layout_constraintBottom_toTopOf="@+id/settingsCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/purple_500" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/settingsCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        app:cardBackgroundColor="#6200EE"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/FAbtn_SaveSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="Timer Settings"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Time Section Label -->
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="Duration (Minutes)"
+                android:textColor="@color/teal_200"
+                android:textSize="14sp" />
+
+            <!-- Study Sessions Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                app:boxStrokeColor="@color/white"
+                app:hintTextColor="@color/white">
+
+                <EditText
+                    android:id="@+id/textCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Study Sessions"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_primary"
+                    android:textColorHint="@color/material_dynamic_neutral80" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Minutes -->
+
+
+            <TextView
+                android:id="@+id/minutesLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="4dp"
+                android:text="Minutes"
+                android:textColor="@color/teal_200"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                app:boxStrokeColor="@color/white"
+                app:hintTextColor="@color/white">
+
+                <EditText
+                    android:id="@+id/editStudyMinutes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Study Minutes"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textAlignment="center" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Pomodoro Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                app:boxStrokeColor="@color/white"
+                app:hintTextColor="@color/white">
+
+                <EditText
+                    android:id="@+id/editPomodoroTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Pomodoro"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_primary"
+                    android:textColorHint="@color/material_dynamic_neutral_variant80" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Short Break Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:boxStrokeColor="@color/white"
+                app:hintTextColor="@color/white">
+
+                <EditText
+                    android:id="@+id/editShortBreak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="Short Break"
+                    android:inputType="number"
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_primary"
+                    android:textColorHint="@color/material_dynamic_neutral_variant80" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FAbtn_SaveSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="saveSetTimer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settingsCard"
+        app:layout_constraintVertical_bias="0.526"
+        app:srcCompat="?android:attr/textCheckMark" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

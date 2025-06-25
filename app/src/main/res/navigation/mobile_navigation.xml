@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.POMODORO_PRO.ui.home.HomeFragment"
+        android:label="@string/title_home"/>
+    <action
+        android:id="@+id/action_home_to_report"
+        app:destination="@id/navigation_report"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.POMODORO_PRO.ui.task.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_calender"
+        android:name="com.example.POMODORO_PRO.ui.event.CalendarFragment"
+        android:label="@string/title_calendar"
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/navigation_progress"
+        android:name="com.example.POMODORO_PRO.ui.progress.ProgressFragment"
+        android:label="Progress"
+        tools:layout="@layout/progress_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_report"
+        android:name="com.example.POMODORO_PRO.ui.report.ReportFragment"
+        android:label="Reports"
+        tools:layout="@layout/fragment_report" />
+
+    <action
+        android:id="@+id/action_currentFragment_to_dashboardFragment"
+        app:destination="@layout/fragment_dashboard" />
+
+</navigation>

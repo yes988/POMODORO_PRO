@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_task" />
+
+    <item
+        android:id="@+id/navigation_progress"
+        android:icon="@drawable/progress1"
+        android:title="@string/title_progress" />
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_report"
+        android:icon="@drawable/report"
+        android:title="@string/title_report" />
+
+    <item
+        android:id="@+id/navigation_calender"
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/title_event" />
+
+
+    
+
+</menu>

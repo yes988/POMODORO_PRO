@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="70dp"
+    android:layout_height="90dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <!-- Day of week (Mon, Tue, etc.) -->
+    <TextView
+        android:id="@+id/textDayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        tools:text="MON" />
+
+    <!-- Day number in a circular background -->
+    <FrameLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp">
+        
+        <TextView
+            android:id="@+id/textDayNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_calendar_day_selector"
+            android:gravity="center"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="15" />
+            
+        <!-- Event indicator dot (hidden when no events) -->
+        <View
+            android:id="@+id/eventIndicator"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/circle_indicator"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <!-- We'll keep the combined day TextView for backward compatibility but make it invisible -->
+    <TextView
+        android:id="@+id/textDay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"/>
+</LinearLayout>

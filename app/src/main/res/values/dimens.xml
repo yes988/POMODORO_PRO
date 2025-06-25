@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- Achievement dimensions -->
+    <dimen name="achievement_grid_spacing">8dp</dimen>
+    
+    <!-- Task Details dimensions -->
+    <dimen name="task_detail_card_margin">16dp</dimen>
+    <dimen name="task_detail_card_corner_radius">12dp</dimen>
+    <dimen name="task_detail_card_elevation">4dp</dimen>
+    <dimen name="task_detail_padding">16dp</dimen>
+    <dimen name="task_detail_label_margin">8dp</dimen>
+    <dimen name="task_detail_section_margin">24dp</dimen>
+    <dimen name="task_detail_icon_size">24dp</dimen>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "333609877675",
+    "project_id": "calender-9cab2",
+    "storage_bucket": "calender-9cab2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333609877675:android:d79337d7b06514182137ee",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcJHDw79IxQtRCFt3I2lE9PFYCB8WB-tM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
